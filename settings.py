@@ -37,3 +37,7 @@ AUTH_DIR = 'auth'
 AUTH_FILE_NAME = 'temp.json'
 # CODECS: List of supported codecs. Defaults to "avc1,acc" if not set, split into a tuple.
 CODECS = tuple(os.environ.get("CODECS", "avc1,aac").split(","))
+
+# YouTube API Configuration
+YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "AIzaSyDcJYgflcDs4vmrx8rlEjNdnwJQPds_978")
+YOUTUBE_API_URL = os.environ.get("YOUTUBE_API_URL", "https://www.googleapis.com/youtube/v3")

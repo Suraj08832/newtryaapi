@@ -1,0 +1,105 @@
+{
+  "name": "Youtube-dl-api",
+  "description": "A YouTube video download API built with Quart",
+  "repository": "https://github.com/DannyAkintunde/Youtube-dl-api",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["python", "quart", "youtube", "api", "video-download"],
+  "env": {
+    "DEBUG": {
+      "description": "Debug mode (True/False)",
+      "value": "False",
+      "required": false
+    },
+    "MAX_SIZE": {
+      "description": "Maximum download size in bytes (default: 2147483648 = 2GB)",
+      "value": "2147483648",
+      "required": false
+    },
+    "MAX_LENGTH": {
+      "description": "Maximum video length (empty for no limit)",
+      "value": "",
+      "required": false
+    },
+    "MAX_SEARCH": {
+      "description": "Maximum search results (default: 25)",
+      "value": "25",
+      "required": false
+    },
+    "MIN_SEARCH_AMOUNT": {
+      "description": "Minimum search results (default: 2)",
+      "value": "2",
+      "required": false
+    },
+    "DEFUALT_AMOUNT": {
+      "description": "Default search results (default: 20)",
+      "value": "20",
+      "required": false
+    },
+    "EXPIRATION": {
+      "description": "File expiration time in seconds (default: 1800 = 30 minutes)",
+      "value": "1800",
+      "required": false
+    },
+    "CODECS": {
+      "description": "Supported codecs (default: avc1,aac)",
+      "value": "avc1,aac",
+      "required": false
+    },
+    "PROXIES": {
+      "description": "Comma-separated list of proxies (optional)",
+      "value": "",
+      "required": false
+    },
+    "AUTH": {
+      "description": "Enable authentication (True/False)",
+      "value": "False",
+      "required": false
+    },
+    "ACCESS_TOKEN": {
+      "description": "YouTube access token (required if AUTH=True)",
+      "value": "",
+      "required": false
+    },
+    "REFRESH_TOKEN": {
+      "description": "YouTube refresh token (required if AUTH=True)",
+      "value": "",
+      "required": false
+    },
+    "EXPIRES": {
+      "description": "Token expiration (required if AUTH=True)",
+      "value": "",
+      "required": false
+    },
+    "VISITOR_DATA": {
+      "description": "Visitor data (required if AUTH=True)",
+      "value": "",
+      "required": false
+    },
+    "PO_TOKEN": {
+      "description": "PO token (required if AUTH=True)",
+      "value": "",
+      "required": false
+    },
+    "YOUTUBE_API_KEY": {
+      "description": "YouTube Data API v3 Key",
+      "value": "AIzaSyDcJYgflcDs4vmrx8rlEjNdnwJQPds_978",
+      "required": false
+    },
+    "YOUTUBE_API_URL": {
+      "description": "YouTube Data API v3 URL",
+      "value": "https://www.googleapis.com/youtube/v3",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
